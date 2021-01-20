@@ -13,6 +13,8 @@ Test w/`python checkoff.py`; create config.json as:
 }
 ```
 
+Reset is which hour in 24 hour format the dailies reset in your timezone.
+
 Requires the `requests` library to be installed.
 
 ### Install
