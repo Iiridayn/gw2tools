@@ -1,5 +1,7 @@
 Just some tool scripts for GW2.
 
+Dual licensed CC0/WTFPL - chose whichever you prefer.
+
 ## checkoff.py
 
 Test w/`python checkoff.py`; create config.json as:
