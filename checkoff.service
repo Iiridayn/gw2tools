@@ -1,0 +1,9 @@
+[Unit]
+Description=Update task list with GW2 account task completion
+
+[Service]
+Type=oneshot
+ExecStart=<path to>/checkoff.py cron
+
+[Install]
+WantedBy=default.target
