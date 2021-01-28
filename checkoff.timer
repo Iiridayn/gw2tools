@@ -2,7 +2,7 @@
 Description=Poll GW2 API for account updates every 15 mins
 
 [Timer]
-OnCalendar=*:0/15
+OnCalendar=*:5/15
 
 [Install]
 WantedBy=default.target
