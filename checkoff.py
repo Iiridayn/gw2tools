@@ -26,7 +26,7 @@ with open(pathlib.Path(__file__).parent / 'config.json', 'r') as conf:
 
 now = datetime.datetime.now()
 day = datetime.date.today()
-if now.hour >= int(config['reset']):
+if now.hour < int(config['reset']):
     day += datetime.timedelta(days=1)
 file = os.path.expanduser(config['path'] + '/' + day.isoformat() + '.md')
 #print(file)
