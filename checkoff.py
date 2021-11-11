@@ -50,6 +50,10 @@ if response.status_code != 200:
     exit(2)
 materials = [' '.join(x.lower().split('_')[2:]) for x in response.json()]
 
+# TODO https://api.guildwars2.com/v2/account/dungeons; for daily dungeon paths
+# TODO https://api.guildwars2.com/v2/account/raids for weekly raids
+# TODO https://api.guildwars2.com/v2/achievements?ids=4181 for blood in the water; looks like I can also flag dailies
+
 check = bosses + materials
 for line in fileinput.input(files=file, inplace=True):
     for item in check:
