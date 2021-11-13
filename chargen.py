@@ -18,6 +18,16 @@ if len(sys.argv) >= 3 and sys.argv[2] in genders:
     gender = sys.argv[2]
 print("Gender:", gender)
 
+professions = [
+    'Warrior', 'Guardian', 'Revenant',
+    'Ranger', 'Thief', 'Engineer',
+    'Necromancer', 'Elementalist', 'Mesmer',
+]
+profession = professions[random.randint(0, len(professions) - 1)]
+if len(sys.argv) >= 4 and sys.argv[3] in professions:
+    profession = sys.argv[3]
+print("Profession:", profession)
+
 print("Height:", percent())
 if race == races[0]: # Charr
     print("Build:", random.randint(1, 8 if gender == genders[0] else 7))
@@ -224,7 +234,17 @@ print("Clothing color 1:", random.randint(1, 21))
 print("Clothing color 2:", random.randint(1, 21))
 print("Clothing color 3:", random.randint(1, 21))
 
-# TODO: class options, racial backgrounds
 # Warrior - 3 - helms or shoulders, Guardian - 3 kinds of shoulders, Ranger - 3 pets
+# Thief - 3 hat types, Engi - 3 - hat or back item, Necro - 3 facemasks, Ele - 4 Hats
+# Mesmer - 3 hats, Rev - 3 hats
+print("Professional Accessory:", random.randint(1, 4 if profession == professions[7] else 3))
 print("Emotion:", ["Charm", "Nobility", "Might"][random.randint(0, 2)])
+
 # Charr: 3 legions, 5 warbandmates, 3 sires
+# Sylvari: 3 visions, 3 teachings, 4 cycles
+# Asura: 3 colleges, 3 inventions, 4 mentors
+# Norn: 3 strengths, 3 pasts, 4 spirits
+# Human: 3 backgrounds, 3 regrets, 6 gods
+print("Racial option 1:", random.randint(1, 3))
+print("Racial option 2:", random.randint(1, 5 if race == races[0] else 3))
+print("Racial option 3:", random.randint(1, 3 if race == races[0] else 6 if race == races[1] else 4))
