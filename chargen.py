@@ -20,12 +20,12 @@ print("Gender:", gender)
 
 print("Height:", percent())
 if race == races[0]: # Charr
-    print("Build:", random.randint(1, 8 if gender == gender[0] else 7))
-    print("Coat:", random.randint(1, 14 if gender == gender[0] else 16))
+    print("Build:", random.randint(1, 8 if gender == genders[0] else 7))
+    print("Coat:", random.randint(1, 14 if gender == genders[0] else 16))
     print("Color:", random.randint(1, 35))
     print("Pattern Color:", random.randint(1, 35))
 
-    print("Hair:", random.randint(1, 9 if gender == gender[0] else 10))
+    print("Hair:", random.randint(1, 9 if gender == genders[0] else 10))
     print("Hair Color:", random.randint(1, 35))
     print("Accessory Color:", random.randint(1, 21))
     print("Face:", random.randint(1, 9))
@@ -35,8 +35,12 @@ if race == races[0]: # Charr
     print("Eye angle:", percent())
     print("Eye openness:", percent())
     print("Eye separation:", percent())
-    print("Eye size:", percent())
-    print("Iris size:", percent())
+    if gender == genders[0]:
+        print("Iris size:", percent())
+        print("Eye size:", percent())
+    else:
+        print("Eye size:", percent())
+        print("Iris size:", percent())
     print("Eyebrow position:", percent())
     print("Eyebrow angle:", percent())
     print("Eyebrow thickness:", percent())
@@ -53,14 +57,14 @@ if race == races[0]: # Charr
     print("Ear size:", percent())
     print("Head size:", percent())
 elif race == races[1]: # Human
-    print("Build:", random.randint(1, 7 if gender == gender[0] else 10))
+    print("Build:", random.randint(1, 7 if gender == genders[0] else 10))
     print("Skintone:", random.randint(1, 36))
 
-    print("Face:", random.randint(1, 20 if gender == gender[0] else 27))
+    print("Face:", random.randint(1, 20 if gender == genders[0] else 27))
     print("Hair:", random.randint(1, 41))
     print("Hair Color:", random.randint(1, 46))
     print("Accessory Color:", random.randint(1, 21))
-    if gender == gender[0]:
+    if gender == genders[0]:
           print("Facial Hair:", random.randint(1, 17))
 
     print("Eye angle:", percent())
@@ -84,22 +88,22 @@ elif race == races[1]: # Human
 
     print("Chin length:", percent())
     print("Jaw width:", percent())
-    if gender == gender[1]:
+    if gender == genders[1]:
         print("Underbite?:", percent())
         print("Cheeks:", percent())
     print("Head size:", percent())
     print("Head width:", percent())
 elif race == races[2]: # Norn
-    print("Build:", random.randint(1, 5 if gender == gender[0] else 6))
+    print("Build:", random.randint(1, 5 if gender == genders[0] else 6))
     print("Skintone:", random.randint(1, 36))
-    print("Tattoos:", random.randint(1, 25 if gender == gender[0] else 22))
+    print("Tattoos:", random.randint(1, 25 if gender == genders[0] else 22))
     print("Tattoo color:", random.randint(1, 14))
 
-    print("Face:", random.randint(1, 9 if gender == gender[0] else 11))
-    print("Hair:", random.randint(1, 16 if gender == gender[0] else 20))
+    print("Face:", random.randint(1, 9 if gender == genders[0] else 11))
+    print("Hair:", random.randint(1, 16 if gender == genders[0] else 20))
     print("Hair Color:", random.randint(1, 46))
     print("Accessory Color:", random.randint(1, 21))
-    if gender == gender[0]:
+    if gender == genders[0]:
           print("Facial Hair:", random.randint(1, 14))
 
     print("Eye angle:", percent())
@@ -123,7 +127,7 @@ elif race == races[2]: # Norn
 
     print("Chin length:", percent())
     print("Jaw width:", percent())
-    if gender == gender[1]:
+    if gender == genders[1]:
         print("Underbite?:", percent())
         print("Cheeks:", percent())
     print("Head size:", percent())
@@ -137,9 +141,9 @@ elif race == races[3]: # Asura
     print("Hair:", random.randint(1, 9))
     print("Hair Color:", random.randint(1, 46))
     print("Accessory Color:", random.randint(1, 21))
-    print("Face:", random.randint(1, 8 if gender == gender[0] else 9))
+    print("Face:", random.randint(1, 8 if gender == genders[0] else 9))
 
-    print("Ears:", random.randint(1, 7 if gender == gender[0] else 6))
+    print("Ears:", random.randint(1, 7 if gender == genders[0] else 6))
     print("Ear point height:", percent())
     print("Ear thickness:", percent())
     print("Ear length:", percent())
@@ -173,16 +177,16 @@ elif race == races[3]: # Asura
 
     print("Head size:", percent())
 elif race == races[4]: # Slyvari
-    print("Build:", random.randint(1, 10 if gender == gender[0] else 12))
+    print("Build:", random.randint(1, 10 if gender == genders[0] else 12))
     print("Skintone:", random.randint(1, 96))
-    print("Skin pattern:", random.randint(1, 7 if gender == gender[0] else 8))
+    print("Skin pattern:", random.randint(1, 7 if gender == genders[0] else 8))
     print("Pattern color:", random.randint(1, 64))
     print("Pattern light color:", random.randint(1, 40))
     print("Pattern brightness:", percent())
 
-    print("Hair:", random.randint(1, 11 if gender == gender[0] else 12))
+    print("Hair:", random.randint(1, 11 if gender == genders[0] else 12))
     print("Hair Color:", random.randint(1, 76))
-    print("Face:", random.randint(1, 9 if gender == gender[0] else 10))
+    print("Face:", random.randint(1, 9 if gender == genders[0] else 10))
 
     print("Ears:", random.randint(1, 8))
     print("Ear length:", percent())
@@ -208,7 +212,7 @@ elif race == races[4]: # Slyvari
     print("Lower lip size:", percent())
     print("Mouth width", percent())
 
-    if gender == gender[1]:
+    if gender == genders[1]:
         print("Cheeks:", percent())
     print("Jaw width:", percent())
     print("Chin length:", percent())
@@ -220,6 +224,7 @@ print("Clothing color 1:", random.randint(1, 21))
 print("Clothing color 2:", random.randint(1, 21))
 print("Clothing color 3:", random.randint(1, 21))
 
-print("Emotion:", ["Charm", "Nobility", "Might"][random.randint(0, 2)])
-
 # TODO: class options, racial backgrounds
+# Warrior - 3 - helms or shoulders, Guardian - 3 kinds of shoulders, Ranger - 3 pets
+print("Emotion:", ["Charm", "Nobility", "Might"][random.randint(0, 2)])
+# Charr: 3 legions, 5 warbandmates, 3 sires
